@@ -1,0 +1,19 @@
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+<html xmlns:form="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer View Form </title>
+</head>
+<body>
+<p>The Customer is confirmed: $(customer.firstName) $(customer.lastName)</p>
+<p>Free passes: ${customer.freePasses}</p>
+
+<p>Postal Code: ${customer.postalCode}</p>
+
+<p>Course Code: ${customer.courseCode}</p>
+<!--calls a getter mettod iecustomer.getCOurseCode-->
+
+</body>
+</html>

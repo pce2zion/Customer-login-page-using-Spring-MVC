@@ -1,0 +1,50 @@
+
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+<html xmlns:form="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student registration Form</title>
+</head>
+<body>
+
+    <form:form action="/student/processForm" modelAttribute="student">
+        <form:label path="firstName">First Name:</form:label>
+<%--        the path property, helps to provide
+ <%-- getters ie to get the first name attribute--%>
+        <form:input path="firstName"/>
+        <br><br>
+
+        Last Name: <form:input path="lastName"/>
+        <br><br>
+
+<!--        Adding the select field-->
+        Country:
+        <form:select path="country">
+            <form:option value="Brazil" label="Brazil"/>
+            <form:option value="France" label="France"/>
+            <form:option value="Germany" label="Germany"/>France
+            <form:option value="India" label="India"/>
+
+        </form:select>
+        <br><br>
+
+<!--        Adding radio buttons-->
+        Favorite language:
+        Java <form:radiobutton path="favoriteLanguage" value="Java"/>
+        PHP <form:radiobutton path="favoriteLanguage" value="PHP"/>
+        Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>
+        C# <form:radiobutton path="favoriteLanguage" value="C#"/>
+        <input type="submit" value="Submit"/>
+        <br><br>
+
+<!--        Adding Checkboxes-->
+        Operating Systems
+        Linux <form:checkbox path="operatingSystems" value="Linux"/>
+        Mac <form:checkbox path="operatingSystems" value="Linux"/>
+        Windows <form:checkbox path="operatingSystems" value="Windows"/>
+
+    </form:form>
+</body>
+</html>
